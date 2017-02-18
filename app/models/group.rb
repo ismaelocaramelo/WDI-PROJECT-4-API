@@ -1,9 +1,8 @@
 class Group < ApplicationRecord
   has_and_belongs_to_many :users
-  has_one :admin_id, class_name:"User", foreign_key: :admin_id
+  belongs_to :admin, class_name:"User"
 
   validates :name, presence: true, uniqueness: true
-  vadidates :protected, acceptance: false
 end
 
 # belongs_to

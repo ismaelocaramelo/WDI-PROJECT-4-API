@@ -6,7 +6,7 @@ class OrderRequest < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :quantity, presence: true, numericality: true
-  vadidates :payment, acceptance: false
+  validates :payment, acceptance: false
 end
 
 # belongs_to

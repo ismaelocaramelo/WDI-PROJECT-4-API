@@ -24,6 +24,7 @@ rails g migration AddfieldsToMeal category_id:integer user_id:integer
 rails g migration AddfieldToPublication user_id:integer
 rails db:drop db:create db:migrate
 rails generate migration meal_tags
+rails g migration AddfieldsToUser first_name last_name photo:text
 
 rails d migration CreateMealTagsJoinTable meal_id:integer tags_id:integer
 rails d migration CreateJoinTableGroupUsers group user

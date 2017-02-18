@@ -10,28 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218144321) do
+ActiveRecord::Schema.define(version: 20170218172203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.reference :parent_category,    index: true
+    # t.integer  "parent_category_id"
+    # t.index ["parent_category_id"], name: "index_categories_on_parent_category_id", using: :btree
   end
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
     t.text     "icon"
-    t.boolean  "protected"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "protected",  default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "admin_id",                   null: false
+    t.index ["admin_id"], name: "index_groups_on_admin_id", using: :btree
   end
 
   create_table "groups_users", id: false, force: :cascade do |t|
     t.integer "group_id"
     t.integer "user_id"
+    t.boolean "accepted", default: false
     t.index ["group_id"], name: "index_groups_users_on_group_id", using: :btree
     t.index ["user_id"], name: "index_groups_users_on_user_id", using: :btree
   end
@@ -59,10 +65,14 @@ ActiveRecord::Schema.define(version: 20170218144321) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.datetime "date"
+    t.datetime "date",       null: false
     t.text     "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "type_id"
+    t.index ["type_id"], name: "index_notifications_on_type_id", using: :btree
+    t.index ["user_id"], name: "index_notifications_on_user_id", using: :btree
   end
 
   create_table "order_requests", force: :cascade do |t|
@@ -104,6 +114,9 @@ ActiveRecord::Schema.define(version: 20170218144321) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "photo"
   end
 
 end

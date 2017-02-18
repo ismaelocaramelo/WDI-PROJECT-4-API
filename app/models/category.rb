@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
-  belongs_to :parent_category_id, class_name: "Category"
-  has_many :children, class_name: "Category", foreign_key: "parent_category_id"
+  belongs_to :parent_category, class_name: "Category", inverse_of: :childrens, required: false
+  has_many :childrens, class_name: "Category", foreign_key: :parent_category_id, inverse_of: :parent_category
 end
 
 # belongs_to

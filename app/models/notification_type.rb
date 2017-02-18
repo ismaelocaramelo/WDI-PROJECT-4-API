@@ -1,5 +1,5 @@
 class NotificationType < ApplicationRecord
-  has_many :notifications
+  has_many :notifications, class_name: "Notification", foreign_key: :type_id
 end
 # belongs_to
 # has_one

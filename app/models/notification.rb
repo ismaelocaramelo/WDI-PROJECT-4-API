@@ -1,6 +1,12 @@
 class Notification < ApplicationRecord
-  has_one :type_id, class_name: "NotificationType", foreign_key: :type_id
-  belongs_to :user_id, class_name: "User", foreign_key: :user_id
+  before_create :set_today
+
+  def set_today
+    self.date = Time.now
+  end
+
+  has_one :type, class_name: "NotificationType"
+  belongs_to :user, class_name: "User"
 end
 
 # belongs_to
