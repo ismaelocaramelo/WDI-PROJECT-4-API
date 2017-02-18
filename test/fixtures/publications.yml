@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-02-18 10:56:11
+  setDate: 2017-02-18 10:56:11
+  deadline: 2017-02-18 10:56:11
+  meetingPoint: MyText
+
+two:
+  date: 2017-02-18 10:56:11
+  setDate: 2017-02-18 10:56:11
+  deadline: 2017-02-18 10:56:11
+  meetingPoint: MyText
