@@ -3,6 +3,10 @@ class OrderRequest < ApplicationRecord
   has_one :status_id, class_name: "OrderStatus", foreign_key: :status_id
   has_one :meal_id, class_name: "Meal", foreign_key: :meal_id
   has_one :publication_id, class_name: "Publication", foreign_key: :publication_id
+
+  validates :email, presence: true, uniqueness: true
+  validates :quantity, presence: true, numericality: true
+  vadidates :payment, acceptance: false
 end
 
 # belongs_to

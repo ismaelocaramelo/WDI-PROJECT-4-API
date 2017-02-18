@@ -1,5 +1,9 @@
 class OrderStatus < ApplicationRecord
   has_many :orderrequests
+
+  validates :title, presence: true, uniqueness: true
+
+  validates :title, :format => { :with => /(pending)|(cancel)|(rejected)|(accepted)/, :message => "Wrong status only pending, cancel, rejected or accepted" }
 end
 
 # belongs_to

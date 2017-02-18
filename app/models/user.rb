@@ -11,7 +11,8 @@ class User < ApplicationRecord
   has_many :groups
 
   validates :email, presence: true, uniqueness: true
-  #Needs validates!!
+  validates :first_name, presence: true, uniqueness: true
+  validates :last_name, presence: true, uniqueness: true
 end
 
 # belongs_to

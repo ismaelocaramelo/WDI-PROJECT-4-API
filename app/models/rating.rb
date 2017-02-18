@@ -1,6 +1,8 @@
 class Rating < ApplicationRecord
   belongs_to :user_id, class_name: "User", foreign_key: :user_id
   belongs_to :meal_id, class_name: "Meal", foreign_key: :meal_id
+
+  validates :evaluation, presence: true, :numericality => { :only_integer => true }
 end
 
 # belongs_to
