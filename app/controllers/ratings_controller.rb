@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-  before_action :set_rating, only: [:show, :update, :destroy]
+  before_action :set_rating, only: [:show, :update]
 
   # GET /ratings
   def index
@@ -33,10 +33,6 @@ class RatingsController < ApplicationController
     end
   end
 
-  # DELETE /ratings/1
-  def destroy
-    @rating.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

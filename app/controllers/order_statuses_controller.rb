@@ -1,5 +1,5 @@
 class OrderStatusesController < ApplicationController
-  before_action :set_order_status, only: [:show, :update, :destroy]
+  before_action :set_order_status, only: [:show, :update]
 
   # GET /order_statuses
   def index
@@ -33,10 +33,6 @@ class OrderStatusesController < ApplicationController
     end
   end
 
-  # DELETE /order_statuses/1
-  def destroy
-    @order_status.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

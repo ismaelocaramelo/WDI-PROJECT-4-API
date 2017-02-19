@@ -1,5 +1,5 @@
 class NotificationTypesController < ApplicationController
-  before_action :set_notification_type, only: [:show, :update, :destroy]
+  before_action :set_notification_type, only: [:show, :update]
 
   # GET /notification_types
   def index
@@ -33,10 +33,7 @@ class NotificationTypesController < ApplicationController
     end
   end
 
-  # DELETE /notification_types/1
-  def destroy
-    @notification_type.destroy
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

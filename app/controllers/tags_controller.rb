@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :set_tag, only: [:show, :update, :destroy]
+  before_action :set_tag, only: [:show, :update]
 
   # GET /tags
   def index
@@ -33,10 +33,6 @@ class TagsController < ApplicationController
     end
   end
 
-  # DELETE /tags/1
-  def destroy
-    @tag.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -3,7 +3,7 @@ class OrderRequest < ApplicationRecord
   belongs_to :status, class_name: "OrderStatus"
   belongs_to :meal, class_name: "Meal", required: false
   belongs_to :publication, class_name: "Publication", required: false
-  has_one :rating, class_name: "Rating", required: false
+  has_one :rating, class_name: "Rating", required: false, dependent: :destroy
 
   validates :quantity, presence: true, numericality: true
 end

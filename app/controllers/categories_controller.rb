@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :update, :destroy]
-
+  before_action :set_category, only: [:show, :update]
+  
   # GET /categories
   def index
     @categories = Category.all
@@ -33,10 +33,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # DELETE /categories/1
-  def destroy
-    @category.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

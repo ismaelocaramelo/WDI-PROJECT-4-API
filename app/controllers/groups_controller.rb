@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :update, :destroy]
+  before_action :set_group, only: [:show, :update]
 
   # GET /groups
   def index
@@ -33,10 +33,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  # DELETE /groups/1
-  def destroy
-    @group.destroy
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

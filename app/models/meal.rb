@@ -6,10 +6,11 @@ class Meal < ApplicationRecord
   end
 
   has_and_belongs_to_many :tags, required: false
+  before_destroy { tags.clear }
   belongs_to :category, class_name: "Category"
   belongs_to :user, class_name: "User"
-  has_many :order_requests, class_name: "OrderRequest", foreign_key: :meal_id
-  has_many :publications, class_name: "Publication", foreign_key: :meal_id
+  has_many :order_requests, class_name: "OrderRequest", foreign_key: :meal_id, dependent: :destroy
+  has_many :publications, class_name: "Publication", foreign_key: :meal_id, dependent: :destroy
   has_many :ratings, through: :order_requests
 
   validates :name, presence: true
