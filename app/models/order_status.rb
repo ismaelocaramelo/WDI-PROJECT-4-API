@@ -1,5 +1,5 @@
 class OrderStatus < ApplicationRecord
-  has_many :orderrequests
+  has_many :order_requests, class_name: "OrderRequest", foreign_key: :status_id
 
   validates :title, presence: true, uniqueness: true
 

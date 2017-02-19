@@ -46,6 +46,6 @@ class GroupsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def group_params
-      params.require(:group).permit(:name, :icon, :admin_id, :user_id, :type_id, :protected)
+      params.require(:group).permit(:name, :icon, :admin_id, :type_id, :protected)
     end
 end

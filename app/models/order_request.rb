@@ -1,12 +1,11 @@
 class OrderRequest < ApplicationRecord
-  belongs_to :user_id, class_name: "User", foreign_key: :user_id
-  has_one :status_id, class_name: "OrderStatus", foreign_key: :status_id
-  has_one :meal_id, class_name: "Meal", foreign_key: :meal_id
-  has_one :publication_id, class_name: "Publication", foreign_key: :publication_id
+  belongs_to :user, class_name: "User"
+  belongs_to :status, class_name: "OrderStatus"
+  belongs_to :meal, class_name: "Meal", required: false
+  belongs_to :publication, class_name: "Publication", required: false
+  has_one :rating, class_name: "Rating", required: false
 
-  validates :email, presence: true, uniqueness: true
   validates :quantity, presence: true, numericality: true
-  validates :payment, acceptance: false
 end
 
 # belongs_to

@@ -5,8 +5,10 @@ class Notification < ApplicationRecord
     self.date = Time.now
   end
 
-  has_one :type, class_name: "NotificationType"
-  belongs_to :user, class_name: "User"
+
+  belongs_to :type, class_name: "NotificationType"
+  belongs_to :receiver, class_name: "User"
+  belongs_to :sender, class_name: "User"
 end
 
 # belongs_to

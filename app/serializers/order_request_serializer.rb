@@ -1,3 +1,3 @@
 class OrderRequestSerializer < ActiveModel::Serializer
-  attributes :id, :quantity, :payment
+  attributes :id, :quantity, :payment, :user, :publication, :meal, :status, :rating
 end
