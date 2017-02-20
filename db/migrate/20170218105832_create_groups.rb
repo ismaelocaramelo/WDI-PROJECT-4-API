@@ -3,7 +3,8 @@ class CreateGroups < ActiveRecord::Migration[5.0]
     create_table :groups do |t|
       t.string :name
       t.text :icon
-      t.boolean :protected
+      t.boolean :protected, :default => false
+      t.integer :admin_id, index: true, :null => false
 
       t.timestamps
     end

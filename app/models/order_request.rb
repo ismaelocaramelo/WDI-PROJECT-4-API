@@ -1,16 +1,24 @@
 class OrderRequest < ApplicationRecord
-  belongs_to :user, class_name: "User"
-  belongs_to :status, class_name: "OrderStatus"
-  belongs_to :meal, class_name: "Meal", required: false
-  belongs_to :publication, class_name: "Publication", required: false
-  has_one :rating, class_name: "Rating", required: false, dependent: :destroy
+  STATUSES = ["pending", "accepted", "rejected"]
+
+  belongs_to :user
+  belongs_to :meal, required: false
+  has_one :rating, required: false, dependent: :destroy
 
   validates :quantity, presence: true, numericality: true
-end
+  validate :check_status
 
-# belongs_to
-# has_one
-# has_many
-# has_many :through
-# has_one :through
-# has_and_belongs_to_many
+  before_validation :set_default_status, on: :create
+
+  private
+
+    def set_default_status
+      self.status = "pending" if self.status.nil?
+    end
+
+    def check_status
+      unless STATUSES.include? self.status
+        errors.add(:status, "Status is not in the correct format.")
+      end
+    end
+end

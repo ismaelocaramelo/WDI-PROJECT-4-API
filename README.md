@@ -1,25 +1,12 @@
 
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#
+# belongs_to
+# has_one
+# has_many
+# has_many :through
+# has_one :through
+# has_and_belongs_to_many
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#has_many :albums_as_owner, class_name: "Album", foreign_key: :owner_id
+#belongs_to :owner, class_name: "Artist", foreign_key: :owner_id

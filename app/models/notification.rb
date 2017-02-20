@@ -1,19 +1,24 @@
 class Notification < ApplicationRecord
+  NOTIFICATION_TYPES = %w(group order payment reminder)
+
+  belongs_to :receiver, foreign_key: :receiver_id, class_name: "User"
+  belongs_to :sender, foreign_key: :sender_id, class_name: "User"
+
+  validates :receiver_id, presence: true
+  validates :sender_id, presence: true
+  validate :check_notification_types
+
   before_create :set_today
 
-  def set_today
-    self.date = Time.now
-  end
+  private
 
+    def set_today
+      self.date = Time.now
+    end
 
-  belongs_to :type, class_name: "NotificationType"
-  belongs_to :receiver, class_name: "User"
-  belongs_to :sender, class_name: "User"
+    def check_notification_types
+      unless NOTIFICATION_TYPES.include? self.notification_type
+        errors.add(:notification_type, "Type is not in the correct format.")
+      end
+    end
 end
-
-# belongs_to
-# has_one
-# has_many
-# has_many :through
-# has_one :through
-# has_and_belongs_to_many
