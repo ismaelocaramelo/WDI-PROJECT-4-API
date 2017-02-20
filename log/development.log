@@ -19934,3 +19934,88 @@ Migrating to CreateJoinTableMealsTags (20170218231457)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ratings" ("evaluation", "created_at", "updated_at", "user_id", "order_request_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["evaluation", 4], ["created_at", 2017-02-20 11:52:20 UTC], ["updated_at", 2017-02-20 11:52:20 UTC], ["user_id", 1], ["order_request_id", 1]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/meals" for 127.0.0.1 at 2017-02-20 12:09:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "meals_tags" ON "tags"."id" = "meals_tags"."tag_id" WHERE "meals_tags"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mOrderRequest Load (0.8ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" INNER JOIN "order_requests" ON "ratings"."order_request_id" = "order_requests"."id" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (92.18ms)
+Completed 200 OK in 166ms (Views: 96.3ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/order_requests" for 127.0.0.1 at 2017-02-20 12:09:49 +0000
+Processing by OrderRequestsController#index as */*
+  Parameters: {"order_request"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderRequest Load (0.5ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests"[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.76ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `publication' for #<OrderRequest:0x007faa846adf48>):
+  
+app/controllers/order_requests_controller.rb:8:in `index'
+Started GET "/order_requests" for 127.0.0.1 at 2017-02-20 12:11:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrderRequestsController#index as */*
+  Parameters: {"order_request"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderRequest Load (0.6ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMeal Load (0.9ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.23ms)
+Completed 200 OK in 82ms (Views: 40.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/order_requests" for 127.0.0.1 at 2017-02-20 12:12:45 +0000
+Processing by OrderRequestsController#index as */*
+  Parameters: {"order_request"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderRequest Load (0.4ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.7ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/order_requests" for 127.0.0.1 at 2017-02-20 12:12:46 +0000
+Processing by OrderRequestsController#index as */*
+  Parameters: {"order_request"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderRequest Load (0.3ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests"[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.24ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/meals" for 127.0.0.1 at 2017-02-20 12:12:50 +0000
+Processing by MealsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "meals_tags" ON "tags"."id" = "meals_tags"."tag_id" WHERE "meals_tags"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mOrderRequest Load (0.4ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" INNER JOIN "order_requests" ON "ratings"."order_request_id" = "order_requests"."id" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (61.04ms)
+Completed 200 OK in 65ms (Views: 49.8ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:13:48 +0000
+Processing by AuthenticationsController#login as */*
+  Parameters: {"email"=>"ismy@bas.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"ismy@bas.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ismy@bas.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."admin_id" = $1[0m  [["admin_id", 1]]
+[active_model_serializers]   [1m[36mNotification Load (0.6ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" WHERE "notifications"."receiver_id" = $1[0m  [["receiver_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (25.66ms)
+Completed 200 OK in 103ms (Views: 24.2ms | ActiveRecord: 6.6ms)
+
+
