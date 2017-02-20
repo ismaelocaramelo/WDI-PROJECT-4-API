@@ -9,7 +9,6 @@ OrderRequest.destroy_all
 Rating.destroy_all
 NotificationType.destroy_all
 
-
 food = Category.create!(title: "Foods")
   food.childrens.create!(title: "Breakfast")
   lunch = food.childrens.create!(title: "Lunch")
@@ -49,7 +48,6 @@ NotificationType.create!(name: "Groups")
 order = NotificationType.create!(name: "Orders")
 NotificationType.create!(name: "Payments")
 NotificationType.create!(name: "Reminders")
-
 
 
 ismaelo = User.create!(email: "ismy@bas.com", first_name: "ismaelo", last_name: "caramelo", password: "password", password_confirmation: "password")

@@ -1,0 +1,8 @@
+2017-02-20 10:47:11[WARN] user: IsmaelBakkaliChairi
+GET /categories
+USE eager loading detected
+  Category => [:childrens]
+  Add to your finder: :includes => [:childrens]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/categories_controller.rb:8:in `index'
+

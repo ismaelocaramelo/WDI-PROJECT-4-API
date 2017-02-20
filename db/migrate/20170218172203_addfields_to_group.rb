@@ -25,7 +25,5 @@ class AddfieldsToGroup < ActiveRecord::Migration[5.0]
     add_reference :order_requests, :publication, index: true
     add_reference :order_requests, :meal, index: true
     add_reference :order_requests, :rating, index: true
-
-
   end
 end

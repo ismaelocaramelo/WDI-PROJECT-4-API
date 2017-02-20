@@ -17359,3 +17359,146 @@ LINE 1: ...CT "order_requests".* FROM "order_requests" WHERE "order_req...
 : SELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_publication_id" = $1 AND "order_requests"."meal_publication_type" = $2):
   
 app/controllers/meals_controller.rb:8:in `index'
+Started GET "/categories" for 127.0.0.1 at 2017-02-20 09:43:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 2]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 3]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 4]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 5]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 6]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 7]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 8]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 9]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 10]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 11]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 12]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 13]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 14]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 15]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 16]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 17]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 18]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 19]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 20]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 21]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 22]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 23]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 24]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 25]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 26]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (55.06ms)
+Completed 200 OK in 125ms (Views: 67.6ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/meals" for 127.0.0.1 at 2017-02-20 09:46:50 +0000
+Processing by MealsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (1.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "meals_tags" ON "tags"."id" = "meals_tags"."tag_id" WHERE "meals_tags"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mOrderRequest Load (0.6ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" INNER JOIN "order_requests" ON "ratings"."order_request_id" = "order_requests"."id" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (82.47ms)
+Completed 200 OK in 109ms (Views: 78.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/meals" for 127.0.0.1 at 2017-02-20 10:39:53 +0000
+Processing by MealsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "meals_tags" ON "tags"."id" = "meals_tags"."tag_id" WHERE "meals_tags"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mOrderRequest Load (0.4ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mRating Load (0.5ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" INNER JOIN "order_requests" ON "ratings"."order_request_id" = "order_requests"."id" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.63ms)
+Completed 200 OK in 26ms (Views: 17.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/meals" for 127.0.0.1 at 2017-02-20 10:43:46 +0000
+Processing by MealsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "meals_tags" ON "tags"."id" = "meals_tags"."tag_id" WHERE "meals_tags"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mOrderRequest Load (0.3ms)[0m  [1m[34mSELECT "order_requests".* FROM "order_requests" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers]   [1m[36mRating Load (0.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" INNER JOIN "order_requests" ON "ratings"."order_request_id" = "order_requests"."id" WHERE "order_requests"."meal_id" = $1[0m  [["meal_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.12ms)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-02-20 10:43:55 +0000
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 2]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 3]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 4]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 5]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 6]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 7]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 8]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 9]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 10]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 11]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 12]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 13]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 14]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 15]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 16]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 17]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 18]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 19]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 20]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 21]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 22]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 23]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 24]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 25]]
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 26]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.7ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-02-20 10:47:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 1]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 2]]
+[active_model_serializers]   [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 3]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 4]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 5]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 6]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 7]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 8]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 9]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 10]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 11]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 12]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 13]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 14]]
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 15]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 16]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 17]]
+[active_model_serializers]   [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 18]]
+[active_model_serializers]   [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 19]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 20]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 21]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 22]]
+[active_model_serializers]   [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 23]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 24]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 25]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."parent_category_id" = $1[0m  [["parent_category_id", 26]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (90.8ms)
+Completed 200 OK in 158ms (Views: 97.0ms | ActiveRecord: 27.3ms)
+
+
