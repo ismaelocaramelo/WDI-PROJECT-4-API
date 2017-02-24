@@ -15,7 +15,7 @@ class MealsController < ApplicationController
 
   # POST /meals
   def create
-    @meal = Meal.new(meal_params)
+    @meal = @current_user.meals.new(meal_params)
 
     if @meal.save
       render json: @meal, status: :created, location: @meal

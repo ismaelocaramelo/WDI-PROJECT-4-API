@@ -38,13 +38,16 @@ ismaelo = User.create!(email: "ismy@bas.com", first_name: "ismaelo", last_name: 
 jos = User.create!(email: "jos@bas.com", first_name: "jos", last_name: "josss", password: "password", password_confirmation: "password")
 karima = User.create!(email: "karima@bas.com", first_name: "karima", last_name: "karimaa", password: "password", password_confirmation: "password")
 
-ismaelo.own_groups.create!(name: "127 Seven Sisters", icon: "image", protected: "true")
-ismaelo.own_groups.create!(name: "Leganes", icon: "image", protected: "false")
+# group1 = ismaelo.own_groups.create!(name: "127 Seven Sisters", icon: "image", protected: "true")
+#ismaelo.own_groups.create!(name: "Leganes", icon: "image", protected: "false")
+# jos.groups << group1;
+
+# group1.users.create!(user_id: jos.id)
 
 ismaelo.own_notications.create!(message: "So tasteful", notification_type: "order", receiver_id: jos.id)
 ismaelo.own_notications.create!(message: "Alberto want's to join  your group", receiver_id: karima.id, notification_type: "order")
 
-hamburguesa = ismaelo.meals.create!(name: "Hundres of burguers", image: "imagen", price_person: 2, category_id: food.id)
+hamburguesa = ismaelo.meals.create!(name: "Burguers and stuff", image: "http://tokyobestburgers.com/wp-content/uploads/2014/06/Sasa-02-1024x678.jpg", price_person: 2, category_id: food.id)
 hamburguesa.tags.create!(title: '#meat')
 hamburguesa.tags.create!(title:'#halal')
 

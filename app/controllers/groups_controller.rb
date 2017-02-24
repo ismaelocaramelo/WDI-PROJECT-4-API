@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   # GET /groups
   def index
     @groups = Group.all
-
+    p @groups, '***************'
     render json: @groups
   end
 
@@ -32,6 +32,16 @@ class GroupsController < ApplicationController
       render json: @group.errors, status: :unprocessable_entity
     end
   end
+
+  def add_member
+    user = current_user
+    group = Group.find(params[:group_id])
+    group.users << user
+    group.save!
+
+    render json: group
+  end
+
 
 
 
