@@ -95147,3 +95147,350 @@ USE eager loading detected
 Call stack
   /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
 
+2017-03-10 11:44:33[WARN] user: IsmaelBakkaliChairi
+POST /login
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/authentications_controller.rb:18:in `login'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+POST /login
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/authentications_controller.rb:18:in `login'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+POST /login
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/authentications_controller.rb:18:in `login'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /users/1
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/users_controller.rb:13:in `show'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:admin]
+  Add to your finder: :includes => [:admin]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:groups_users]
+  Add to your finder: :includes => [:groups_users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:users]
+  Add to your finder: :includes => [:users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:admin]
+  Add to your finder: :includes => [:admin]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:groups_users]
+  Add to your finder: :includes => [:groups_users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:users]
+  Add to your finder: :includes => [:users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /users/1
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/users_controller.rb:13:in `show'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:admin]
+  Add to your finder: :includes => [:admin]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:groups_users]
+  Add to your finder: :includes => [:groups_users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /groups
+USE eager loading detected
+  Group => [:users]
+  Add to your finder: :includes => [:users]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/groups_controller.rb:8:in `index'
+
+2017-03-10 11:44:34[WARN] user: IsmaelBakkaliChairi
+GET /users/1
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/users_controller.rb:13:in `show'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:order_requests]
+  Add to your finder: :includes => [:order_requests]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:category]
+  Add to your finder: :includes => [:category]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:meals_tags]
+  Add to your finder: :includes => [:meals_tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:tags]
+  Add to your finder: :includes => [:tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:rating]
+  Add to your finder: :includes => [:rating]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:45:59[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:ratings]
+  Add to your finder: :includes => [:ratings]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:17[WARN] user: IsmaelBakkaliChairi
+GET /meals/1
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:13:in `show'
+
+2017-03-10 11:46:17[WARN] user: IsmaelBakkaliChairi
+GET /meals/1
+USE eager loading detected
+  OrderRequest => [:rating]
+  Add to your finder: :includes => [:rating]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:13:in `show'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:order_requests]
+  Add to your finder: :includes => [:order_requests]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:category]
+  Add to your finder: :includes => [:category]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:meals_tags]
+  Add to your finder: :includes => [:meals_tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:tags]
+  Add to your finder: :includes => [:tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:rating]
+  Add to your finder: :includes => [:rating]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:46:47[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:ratings]
+  Add to your finder: :includes => [:ratings]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:order_requests]
+  Add to your finder: :includes => [:order_requests]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:category]
+  Add to your finder: :includes => [:category]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:meals_tags]
+  Add to your finder: :includes => [:meals_tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:tags]
+  Add to your finder: :includes => [:tags]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  OrderRequest => [:rating]
+  Add to your finder: :includes => [:rating]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:05[WARN] user: IsmaelBakkaliChairi
+GET /meals
+USE eager loading detected
+  Meal => [:ratings]
+  Add to your finder: :includes => [:ratings]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/meals_controller.rb:8:in `index'
+
+2017-03-10 11:47:06[WARN] user: IsmaelBakkaliChairi
+GET /users/1
+USE eager loading detected
+  OrderRequest => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/serializers/order_request_serializer.rb:7:in `requester_details'
+  /Users/IsmaelBakkaliChairi/development/WDI-PROJECT-4-API/app/controllers/users_controller.rb:13:in `show'
+
